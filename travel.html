@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VSTravel - Pesan Sekarang</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <a href="index.html" class="header-logo-link">
+          <img
+            src="VSTravel_Logo_Variant3.svg"
+            alt="VSTravel Logo"
+            class="header-logo"
+          />
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a href="index.html"
+              ><img
+                src="assets/Icons/Main.svg"
+                srcset="assets/Icons/Main.svg 1x, assets/Icons/Main@2x.svg 2x"
+                alt="Beranda"
+                class="icon-inline"
+              />Beranda</a
+            >
+          </li>
+          <li>
+            <a href="destination.html"
+              ><img
+                src="assets/Icons/globe.svg"
+                srcset="assets/Icons/globe.svg 1x, assets/Icons/globe@2x.svg 2x"
+                alt="Destinasi"
+                class="icon-inline"
+              />Destinasi</a
+            >
+          </li>
+          <li>
+            <a href="contact.html"
+              ><img
+                src="assets/Icons/chat.svg"
+                srcset="assets/Icons/chat.svg 1x, assets/Icons/chat@2x.svg 2x"
+                alt="Kontak"
+                class="icon-inline"
+              />Kontak Kami</a
+            >
+          </li>
+          <li>
+            <a href="about.html"
+              ><img
+                src="assets/Icons/globe.svg"
+                srcset="assets/Icons/globe.svg 1x, assets/Icons/globe@2x.svg 2x"
+                alt="Tentang"
+                class="icon-inline"
+              />Tentang Kami</a
+            >
+          </li>
+          <li>
+            <a href="travel.html" class="active"
+              ><img
+                src="assets/Icons/calendar.svg"
+                srcset="
+                  assets/Icons/calendar.svg    1x,
+                  assets/Icons/calendar@2x.svg 2x
+                "
+                alt="Pesan"
+                class="icon-inline"
+              />Pesan Sekarang</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <main>
+        <h1 id="what" class="text-center">
+          Pesan Sekarang - Pesan Perjalanan Anda
+        </h1>
+        <section class="benefits modern-section">
+          <h2>Manfaat Memesan dengan VSTravel</h2>
+          <ul>
+            <li>Jaminan harga terbaik</li>
+            <li>Dukungan pelanggan 24/7</li>
+            <li>Kebijakan pembatalan fleksibel</li>
+            <li>Paket perjalanan eksklusif</li>
+            <li>Agent terpercaya dan berpengalaman</li>
+          </ul>
+        </section>
+        <section
+          class="booking-form modern-section"
+          style="
+            max-width: 480px;
+            margin: 2.5rem auto 0 auto;
+            padding: 2rem 2.2rem 1.5rem 2.2rem;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px rgba(44, 46, 67, 0.1);
+          "
+        >
+          <h2
+            style="
+              text-align: center;
+              color: #2c2e43;
+              font-family: 'Playfair Display', serif;
+              font-size: 1.5rem;
+              margin-bottom: 1.2rem;
+            "
+          >
+            Pesan Perjalanan Anda
+          </h2>
+          <form id="travelForm" novalidate>
+            <div class="form-group form-group-mb">
+              <label
+                for="fullName"
+                class="form-label-bold"
+                >Nama Lengkap</label
+              >
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Masukkan nama lengkap Anda"
+                required
+                style="
+                  width: 100%;
+                  padding: 12px 14px;
+                  border-radius: 8px;
+                  border: 1.5px solid #a0c1d1;
+                  font-size: 1.08rem;
+                  outline: none;
+                  transition: border 0.2s;
+                "
+                onfocus="this.style.borderColor='#ff6f61'"
+                onblur="this.style.borderColor='#a0c1d1'"
+              />
+              <span class="error-message" id="error-fullName"></span>
+            </div>
+            <div class="form-group form-group-mb">
+              <label
+                for="phoneNumber"
+                class="form-label-bold"
+                >Nomor Telepon</label
+              >
+              <input
+                type="text"
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="Masukkan nomor telepon Anda"
+                required
+                style="
+                  width: 100%;
+                  padding: 12px 14px;
+                  border-radius: 8px;
+                  border: 1.5px solid #a0c1d1;
+                  font-size: 1.08rem;
+                  outline: none;
+                  transition: border 0.2s;
+                "
+                onfocus="this.style.borderColor='#ff6f61'"
+                onblur="this.style.borderColor='#a0c1d1'"
+              />
+              <span class="error-message" id="error-phoneNumber"></span>
+            </div>
+            <div class="form-group form-group-mb">
+              <label
+                for="destination"
+                class="form-label-bold"
+              >
+                <img
+                  src="assets/Icons/location.svg"
+                  srcset="
+                    assets/Icons/location.svg    1x,
+                    assets/Icons/location@2x.svg 2x
+                  "
+                  alt="Lokasi"
+                  style="
+                    height: 1.1em;
+                    vertical-align: middle;
+                    margin-right: 6px;
+                  "
+                />
+                Pilih Destinasi</label
+              >
+              <select
+                id="destination"
+                name="destination"
+                required
+                style="
+                  width: 100%;
+                  padding: 12px 14px;
+                  border-radius: 8px;
+                  border: 1.5px solid #a0c1d1;
+                  font-size: 1.08rem;
+                  outline: none;
+                  transition: border 0.2s;
+                  background: #f8f4ec;
+                "
+              >
+                <option value="">-- Pilih Destinasi --</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Paris">Paris</option>
+                <option value="Santorini">Santorini</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="Mekah">Mekah</option>
+                <option value="Bali">Bali</option>
+                <option value="New York">New York</option>
+                <option value="London">London</option>
+                <option value="Sydney">Sydney</option>
+                <option value="Cape Town">Cape Town</option>
+              </select>
+              <span class="error-message" id="error-destination"></span>
+            </div>
+            <div class="form-group form-group-mb">
+              <label
+                for="package"
+                class="form-label-bold"
+                >Jenis Paket</label
+              >
+              <select
+                id="package"
+                name="package"
+                required
+                style="
+                  width: 100%;
+                  padding: 12px 14px;
+                  border-radius: 8px;
+                  border: 1.5px solid #a0c1d1;
+                  font-size: 1.08rem;
+                  outline: none;
+                  transition: border 0.2s;
+                  background: #f8f4ec;
+                "
+              >
+                <option value="">-- Pilih Paket --</option>
+                <option value="Penerbangan">Penerbangan</option>
+                <option value="Kapal">Kapal</option>
+              </select>
+              <span class="error-message" id="error-package"></span>
+            </div>
+            <div class="form-group form-group-mb">
+              <label
+                for="travelType"
+                class="form-label-bold"
+                >Jenis Perjalanan</label
+              >
+              <select
+                id="travelType"
+                name="travelType"
+                required
+                style="
+                  width: 100%;
+                  padding: 12px 14px;
+                  border-radius: 8px;
+                  border: 1.5px solid #a0c1d1;
+                  font-size: 1.08rem;
+                  outline: none;
+                  transition: border 0.2s;
+                  background: #f8f4ec;
+                "
+              >
+                <option value="">-- Pilih Jenis Perjalanan --</option>
+                <option value="Ekonomi">Ekonomi</option>
+                <option value="Bisnis">Bisnis</option>
+                <option value="Premium">Premium</option>
+                <option value="Elite">Elite</option>
+                <option value="VIP">VIP</option>
+              </select>
+              <span class="error-message" id="error-travelType"></span>
+            </div>
+            <div class="form-group form-group-mb">
+              <label
+                for="totalParticipants"
+                class="form-label-bold"
+                >Jumlah Peserta</label
+              >
+              <input
+                type="number"
+                id="totalParticipants"
+                name="totalParticipants"
+                min="1"
+                value="1"
+                required
+                style="
+                  width: 100%;
+                  padding: 12px 14px;
+                  border-radius: 8px;
+                  border: 1.5px solid #a0c1d1;
+                  font-size: 1.08rem;
+                  outline: none;
+                  transition: border 0.2s;
+                "
+                onfocus="this.style.borderColor='#ff6f61'"
+                onblur="this.style.borderColor='#a0c1d1'"
+              />
+              <span class="error-message" id="error-totalParticipants"></span>
+            </div>
+            <div class="form-group form-group-mb">
+              <label
+                for="departureDate"
+                class="form-label-bold"
+              >
+                <img
+                  src="assets/Icons/calendar.svg"
+                  srcset="
+                    assets/Icons/calendar.svg    1x,
+                    assets/Icons/calendar@2x.svg 2x
+                  "
+                  alt="Tanggal"
+                  style="
+                    height: 1.1em;
+                    vertical-align: middle;
+                    margin-right: 6px;
+                  "
+                />Tanggal Keberangkatan
+              </label>
+              <input
+                type="date"
+                id="departureDate"
+                name="departureDate"
+                required
+                style="
+                  width: 100%;
+                  padding: 12px 14px;
+                  border-radius: 8px;
+                  border: 1.5px solid #a0c1d1;
+                  font-size: 1.08rem;
+                  outline: none;
+                  transition: border 0.2s;
+                "
+                onfocus="this.style.borderColor='#ff6f61'"
+                onblur="this.style.borderColor='#a0c1d1'"
+              />
+              <span class="error-message" id="error-departureDate"></span>
+            </div>
+            <div class="form-group form-group-mb">
+              <label
+                for="returnDate"
+                class="form-label-bold"
+              >
+                <img
+                  src="assets/Icons/calendar.svg"
+                  srcset="
+                    assets/Icons/calendar.svg    1x,
+                    assets/Icons/calendar@2x.svg 2x
+                  "
+                  alt="Tanggal"
+                  style="
+                    height: 1.1em;
+                    vertical-align: middle;
+                    margin-right: 6px;
+                  "
+                />Tanggal Kembali
+              </label>
+              <input
+                type="date"
+                id="returnDate"
+                name="returnDate"
+                required
+                style="
+                  width: 100%;
+                  padding: 12px 14px;
+                  border-radius: 8px;
+                  border: 1.5px solid #a0c1d1;
+                  font-size: 1.08rem;
+                  outline: none;
+                  transition: border 0.2s;
+                "
+                onfocus="this.style.borderColor='#ff6f61'"
+                onblur="this.style.borderColor='#a0c1d1'"
+              />
+              <span class="error-message" id="error-returnDate"></span>
+            </div>
+            <div class="form-group form-group-mb">
+              <label
+                style="font-weight: 600; display: block; margin-bottom: 0.4rem"
+                >Total Harga</label
+              >
+              <div
+                id="totalPrice"
+                style="font-size: 1.18rem; font-weight: 700; color: #ff6f61"
+              >
+                Rp 0
+              </div>
+            </div>
+            <div
+              id="formMessage"
+              style="margin-bottom: 1.2rem; font-weight: 600"
+            ></div>
+            <div class="form-group">
+              <label
+                for="catatan"
+                style="font-weight: 600; display: block; margin-bottom: 0.4rem"
+                >Catatan Tambahan</label
+              >
+              <textarea
+                id="catatan"
+                name="catatan"
+                rows="3"
+                placeholder="Tulis permintaan khusus (opsional)"
+                style="
+                  width: 100%;
+                  padding: 12px 14px;
+                  border-radius: 8px;
+                  border: 1.5px solid #a0c1d1;
+                  font-size: 1.08rem;
+                  outline: none;
+                  transition: border 0.2s;
+                  background: #f8f4ec;
+                  resize: vertical;
+                "
+                onfocus="this.style.borderColor='#ff6f61'"
+                onblur="this.style.borderColor='#a0c1d1'"
+              ></textarea>
+            </div>
+            <div class="flex-center">
+              <button
+                type="submit"
+                class="btn-book-now"
+                style="width: 100%; margin-top: 0.5rem"
+              >
+                Kirim Pesanan
+              </button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+    <footer class="main-footer">
+      <p>&copy; 2025 VSTravel. Hak cipta dilindungi undang-undang.</p>
+    </footer>
+    <script src="form-validation.js"></script>
+    <script src="Script.js"></script>
+  </body>
+</html>
+

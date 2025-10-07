@@ -1,0 +1,191 @@
+/* Destination detail page styles */
+@font-face {
+  font-family: "Inter";
+  src: url("assets/Fonts/Inter/Inter-VariableFont_opsz,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("assets/Fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("assets/Fonts/Playfair/Playfair-VariableFont_opsz,wdth,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("assets/Fonts/Playfair/Playfair-Italic-VariableFont_opsz,wdth,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+.destination-image {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.destination-section {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  color: #333;
+}
+
+.destination-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #2980b9;
+  padding-bottom: 0.3rem;
+}
+
+.destination-section p,
+.destination-section ul {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.destination-section ul {
+  list-style-type: disc;
+}
+
+figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 0.3rem;
+}
+
+.destination-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.destination-image {
+  width: 260px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(44, 46, 67, 0.1);
+  background: #fff;
+  margin: 0;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.destination-image:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 24px rgba(44, 46, 67, 0.16);
+}
+
+.back-to-destinations-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+.btn-back-destinations {
+  background: var(--cloud-blue, #a0c1d1);
+  color: var(--dark-indigo, #2c2e43);
+  font-family: "Inter", sans-serif;
+  font-size: 1.08rem;
+  padding: 0.7em 1.7em;
+  border: none;
+  border-radius: 2em;
+  box-shadow: 0 2px 10px rgba(44, 46, 67, 0.07);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+}
+
+.btn-back-destinations:hover,
+.btn-back-destinations:focus {
+  background: var(--sunset-coral, #ff6f61);
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(44, 46, 67, 0.13);
+}
+
+/* Icon navigasi pada menu destinasi */
+.nav-icon {
+  height: 1.2em;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+@media (max-width: 900px) {
+  .destination-image {
+    width: 44vw;
+    height: 110px;
+    min-width: 120px;
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .destination-gallery {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .destination-image {
+    width: 90vw;
+    height: 100px;
+    max-width: 95vw;
+  }
+  .btn-back-destinations {
+    width: 95vw;
+    font-size: 1rem;
+    padding: 0.7em 0;
+  }
+  .destination-section h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .destination-gallery {
+    gap: 0.7rem;
+  }
+  .destination-image {
+    width: 98vw;
+    height: 80px;
+    max-width: 99vw;
+  }
+  .btn-back-destinations {
+    width: 98vw;
+    font-size: 1rem;
+    padding: 0.7em 0;
+  }
+  .back-to-destinations-wrapper {
+    margin: 1.2rem 0 1rem 0;
+  }
+}
